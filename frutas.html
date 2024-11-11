@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>AR con A-Frame y AR.js</title>
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body style="margin: 0; overflow: hidden;">
+		<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;"> 
+			<a-assets>
+				<a-asset-item id="fresa" src="https://cdn.glitch.global/ab8616aa-9ba7-4915-ac93-821a7c47ae63/fresa.glb?v=1730128598437"></a-asset-item>
+				<a-asset-item id="kiwi" src="https://cdn.glitch.global/ab8616aa-9ba7-4915-ac93-821a7c47ae63/chilean_kiwi.glb?v=1730131040554"></a-asset-item>
+			</a-assets>
+		
+			<a-marker type="pattern" url="https://cdn.glitch.global/ab8616aa-9ba7-4915-ac93-821a7c47ae63/pattern-fresa%20(1).patt?v=1730133497009">	
+				<a-entity gltf-model="#fresa" rotation="0 90 -90" scale="2 2 2" position="-0.3 0 0"></a-entity>
+			</a-marker> 
+    
+			<a-marker type="pattern" url="https://cdn.glitch.global/ab8616aa-9ba7-4915-ac93-821a7c47ae63/pattern-kiwi.patt?v=1730132559569">
+				<a-entity gltf-model="#kiwi"  scale="1 1 1" position="0 0.4 7.55" rotation="0 0 15"></a-entity>
+			</a-marker> 
+		 
+			<a-entity camera></a-entity> 
+		</a-scene>
+	</body>
+</html>
+
+

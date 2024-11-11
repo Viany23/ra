@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>AR con A-Frame y AR.js</title>
+	
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+
+ 
+ </head>
+
+  <body style="margin: 0; overflow: hidden;">
+  
+	<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;"> 
+
+		<a-marker type="pattern" url="marcadores/cubo.patt">
+			<a-entity position="3.09057 -0.15612 0.00718" geometry="" material="src: texturas/piedra.jpg; repeat: 0.5 0.5" scale="0.10959 2.8304 5.4369" rotation=""> 
+			</a-entity>
+			
+			<a-entity position="-3.80167 1.4 0.00718" geometry="" material="src: texturas/piedra.jpg; repeat: 0.5 0.5" scale="0.10959 2.8304 5.4369" rotation=""> 
+			</a-entity>
+			
+			<a-entity position="0.43106 1.4 0.00718" geometry="" material="src: texturas/piedra.jpg; repeat: 0.5 0.5" scale="0.10959 2.8304 5.4369" rotation=""> 
+			</a-entity>
+			
+			<a-entity position="-1.7139 1.4 2.67685" geometry="" material="src: texturas/piedra.jpg; repeat: 0.5 0.5" scale="0.10959 2.8304 4.20973" rotation="0 90 0"> 
+			</a-entity>
+			
+			<a-entity position="-2.9605 3.67623 0.00718" geometry="" material="src: texturas/techo.jpg; repeat: 1 1" scale="0.10959 3.70885 5.4369" rotation="0 0 -45"> 
+			</a-entity>
+			
+			
+			<a-entity position="-0.32247 3.65311 0.00718" geometry="" material="src: texturas/techo.jpg; repeat: 1 1" scale="0.10959 3.81345 5.4369" rotation="0 0 45"> 
+			</a-entity>
+		
+		
+		
+		
+		<a-entity geometry="primitive: cylinder" rotation="90 0 0"></a-entity>
+		
+		<a-entity geometry="primitive: cone" rotation="90 0 0"></a-entity>
+		<a-entity geometry="primitive: cone" rotation="90 0 0"></a-entity>
+		<a-entity geometry="primitive: cone" rotation="90 0 0"></a-entity>
+		
+		
+		</a-marker> 
+		 
+		<a-marker type="pattern" url="marcadores/cono.patt">
+			 <a-cone position="0 0.5 0" rotation="-57 -5 -4.5" radius-bottom="0.5" 
+			 height="1" material="color: red;" scale="0.7 1 0.78">
+			 </a-cone>
+		</a-marker>
+ 
+		<a-entity camera>
+		</a-entity> 
+
+	</a-scene>
+	
+	
+	
+
+
+  </body>
+
+</html>
+
+
